@@ -219,7 +219,8 @@ export default function HelpRequestForm() {
 
             <button
               type="submit"
-              className="w-full py-4 bg-warm-600 text-white rounded-full font-semibold text-lg hover:bg-warm-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              className="w-full py-4 bg-gradient-to-r from-warm-600 to-warm-700 text-white rounded-full font-semibold text-lg hover:shadow-[0_20px_50px_rgba(246,217,154,0.4)] transition-all duration-500 shadow-xl hover:scale-105 hover:-translate-y-1"
+              aria-label="Надіслати заявку на отримання допомоги"
             >
               Надіслати заявку
             </button>

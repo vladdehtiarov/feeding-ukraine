@@ -181,7 +181,8 @@ export default function VolunteerForm() {
 
             <button
               type="submit"
-              className="w-full py-4 bg-primary-600 text-white rounded-full font-semibold text-lg hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              className="w-full py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-full font-semibold text-lg hover:shadow-[0_20px_50px_rgba(239,145,56,0.4)] transition-all duration-500 shadow-xl hover:scale-105 hover:-translate-y-1"
+              aria-label="Відправити заявку на волонтерство"
             >
               Відправити заявку
             </button>

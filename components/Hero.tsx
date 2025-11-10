@@ -29,10 +29,10 @@ export default function Hero() {
           <h1 className="text-6xl md:text-7xl font-extrabold text-gray-900 mb-8 leading-tight">
             Разом ми{' '}
             <span className="bg-gradient-to-r from-primary-600 via-warm-500 to-peach-500 bg-clip-text text-transparent">
-              годуємо
+              допомагаємо
             </span>
             <br />
-            тих, хто потребує
+            тим, хто потребує
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed font-light">

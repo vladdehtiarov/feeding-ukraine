@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://spilnyi-budynok.onrender.com/sitemap.xml
+
