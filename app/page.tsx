@@ -12,7 +12,7 @@ import LocationMap from '@/components/LocationMap'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import CursorGlow from '@/components/CursorGlow'
-import ScrollReveal from '@/components/ScrollReveal'
+import FadeInSection from '@/components/FadeInSection'
 
 export default function Home() {
   return (
@@ -21,37 +21,37 @@ export default function Home() {
       <Header />
       <Hero />
       
-      <ScrollReveal direction="up" delay={100}>
+      <FadeInSection>
         <About />
-      </ScrollReveal>
+      </FadeInSection>
       
-      <ScrollReveal direction="up" delay={100}>
+      <FadeInSection delay={100}>
         <Impact />
-      </ScrollReveal>
+      </FadeInSection>
       
-      <ScrollReveal direction="up" delay={100}>
+      <FadeInSection delay={200}>
         <HowToHelp />
-      </ScrollReveal>
+      </FadeInSection>
       
-      <ScrollReveal direction="up" delay={100}>
+      <FadeInSection>
         <Donate />
-      </ScrollReveal>
+      </FadeInSection>
       
-      <ScrollReveal direction="up" delay={100}>
+      <FadeInSection delay={100}>
         <VolunteerForm />
-      </ScrollReveal>
+      </FadeInSection>
       
-      <ScrollReveal direction="up" delay={100}>
+      <FadeInSection delay={200}>
         <HelpRequestForm />
-      </ScrollReveal>
+      </FadeInSection>
       
-      <ScrollReveal direction="up" delay={100}>
+      <FadeInSection>
         <LocationMap />
-      </ScrollReveal>
+      </FadeInSection>
       
-      <ScrollReveal direction="up" delay={100}>
+      <FadeInSection delay={100}>
         <Contact />
-      </ScrollReveal>
+      </FadeInSection>
       
       <Footer />
     </main>

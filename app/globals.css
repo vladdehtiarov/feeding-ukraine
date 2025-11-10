@@ -126,3 +126,95 @@ html {
   animation: gradient-border 3s ease infinite;
 }
 
+/* Gradient animation for text */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+
+/* Magnetic button effect */
+.magnetic-button {
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.magnetic-button:hover {
+  transform: scale(1.05);
+}
+
+/* Tilt effect for cards */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.tilt-card:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(5deg);
+}
+
+/* Shine effect */
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shine 3s infinite;
+}
+
+/* Bounce on hover */
+@keyframes bounce-soft {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hover-bounce:hover {
+  animation: bounce-soft 0.6s ease;
+}
+
+/* Fade in sections on scroll */
+.fade-in-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section:not(.fade-in-visible) {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-in-section.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
