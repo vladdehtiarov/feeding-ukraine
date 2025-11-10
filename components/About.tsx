@@ -19,27 +19,29 @@ export default function About() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-16">
-          <div className="group relative bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border border-primary-100 hover:-translate-y-2 overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-100 to-transparent rounded-bl-full opacity-50"></div>
+          <div className="group relative bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border border-primary-100 hover:-translate-y-3 hover:scale-[1.02] overflow-hidden hover-lift">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-100 to-transparent rounded-bl-full opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+            <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-warm-100 to-transparent rounded-tr-full opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
             <div className="relative z-10">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl mb-6 shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
                 <Target className="text-white" size={36} />
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-5">Наша мета</h3>
-              <p className="text-gray-600 leading-relaxed text-lg">
+              <h3 className="text-3xl font-bold text-gray-900 mb-5 group-hover:text-primary-600 transition-colors duration-300">Наша мета</h3>
+              <p className="text-gray-600 leading-relaxed text-lg group-hover:text-gray-700 transition-colors duration-300">
                 Забезпечити продуктами харчування багатодітні сім'ї, малозабезпечених людей похилого віку та всіх, хто потребує допомоги в складних життєвих обставинах.
               </p>
             </div>
           </div>
 
-          <div className="group relative bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 border border-peach-100 hover:-translate-y-2 overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-peach-100 to-transparent rounded-bl-full opacity-50"></div>
+          <div className="group relative bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border border-peach-100 hover:-translate-y-3 hover:scale-[1.02] overflow-hidden hover-lift">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-peach-100 to-transparent rounded-bl-full opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+            <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-primary-100 to-transparent rounded-tr-full opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
             <div className="relative z-10">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-peach-500 to-peach-600 rounded-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <Heart className="text-white" size={36} />
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-peach-500 to-peach-600 rounded-2xl mb-6 shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                <Heart className="text-white group-hover:animate-pulse" size={36} />
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-5">Наші цінності</h3>
-              <p className="text-gray-600 leading-relaxed text-lg">
+              <h3 className="text-3xl font-bold text-gray-900 mb-5 group-hover:text-peach-600 transition-colors duration-300">Наші цінності</h3>
+              <p className="text-gray-600 leading-relaxed text-lg group-hover:text-gray-700 transition-colors duration-300">
                 Ми віримо в силу спільноти, гідність кожної людини та важливість підтримки у важкі часи. Разом ми створюємо теплий дім для всіх.
               </p>
             </div>

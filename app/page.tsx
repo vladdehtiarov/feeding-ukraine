@@ -11,20 +11,48 @@ import HelpRequestForm from '@/components/HelpRequestForm'
 import LocationMap from '@/components/LocationMap'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import CursorGlow from '@/components/CursorGlow'
+import ScrollReveal from '@/components/ScrollReveal'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <CursorGlow />
       <Header />
       <Hero />
-      <About />
-      <Impact />
-      <HowToHelp />
-      <Donate />
-      <VolunteerForm />
-      <HelpRequestForm />
-      <LocationMap />
-      <Contact />
+      
+      <ScrollReveal direction="up" delay={100}>
+        <About />
+      </ScrollReveal>
+      
+      <ScrollReveal direction="up" delay={100}>
+        <Impact />
+      </ScrollReveal>
+      
+      <ScrollReveal direction="up" delay={100}>
+        <HowToHelp />
+      </ScrollReveal>
+      
+      <ScrollReveal direction="up" delay={100}>
+        <Donate />
+      </ScrollReveal>
+      
+      <ScrollReveal direction="up" delay={100}>
+        <VolunteerForm />
+      </ScrollReveal>
+      
+      <ScrollReveal direction="up" delay={100}>
+        <HelpRequestForm />
+      </ScrollReveal>
+      
+      <ScrollReveal direction="up" delay={100}>
+        <LocationMap />
+      </ScrollReveal>
+      
+      <ScrollReveal direction="up" delay={100}>
+        <Contact />
+      </ScrollReveal>
+      
       <Footer />
     </main>
   )
