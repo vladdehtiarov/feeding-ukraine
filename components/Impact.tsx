@@ -9,13 +9,19 @@ export default function Impact() {
   ]
 
   return (
-    <section id="impact" className="py-20 bg-gradient-to-br from-primary-50 via-warm-50 to-peach-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+    <section id="impact" className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-warm-50 to-peach-50"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,186,153,0.2),transparent_50%)]"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="inline-block mb-6">
+            <span className="text-sm font-semibold text-primary-600 tracking-wider uppercase">Результати</span>
+          </div>
+          <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
             Наші досягнення
           </h2>
-          <p className="text-xl text-gray-700">
+          <p className="text-xl md:text-2xl text-gray-600 font-light">
             Завдяки вашій підтримці ми змогли допомогти багатьом людям
           </p>
         </div>
@@ -34,34 +40,34 @@ export default function Impact() {
           ))}
         </div>
 
-        <div className="mt-16 max-w-4xl mx-auto bg-white rounded-2xl p-8 md:p-12 shadow-lg">
-          <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+        <div className="mt-20 max-w-5xl mx-auto bg-white/90 backdrop-blur-sm rounded-3xl p-10 md:p-14 shadow-2xl border border-primary-100">
+          <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10 text-center">
             Що входить в продуктовий набір
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
-            <div className="p-4">
-              <div className="text-4xl mb-2">🍞</div>
-              <p className="text-gray-700 font-medium">Хлібобулочні вироби</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="group p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary-50 hover:to-warm-50 transition-all duration-300">
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🍞</div>
+              <p className="text-gray-800 font-semibold text-lg">Хлібобулочні вироби</p>
             </div>
-            <div className="p-4">
-              <div className="text-4xl mb-2">🥫</div>
-              <p className="text-gray-700 font-medium">Консервація</p>
+            <div className="group p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary-50 hover:to-warm-50 transition-all duration-300">
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🥫</div>
+              <p className="text-gray-800 font-semibold text-lg">Консервація</p>
             </div>
-            <div className="p-4">
-              <div className="text-4xl mb-2">🍝</div>
-              <p className="text-gray-700 font-medium">Макаронні вироби</p>
+            <div className="group p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary-50 hover:to-warm-50 transition-all duration-300">
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🍝</div>
+              <p className="text-gray-800 font-semibold text-lg">Макаронні вироби</p>
             </div>
-            <div className="p-4">
-              <div className="text-4xl mb-2">🌾</div>
-              <p className="text-gray-700 font-medium">Крупи</p>
+            <div className="group p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary-50 hover:to-warm-50 transition-all duration-300">
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🌾</div>
+              <p className="text-gray-800 font-semibold text-lg">Крупи</p>
             </div>
-            <div className="p-4">
-              <div className="text-4xl mb-2">🥛</div>
-              <p className="text-gray-700 font-medium">Молочні продукти</p>
+            <div className="group p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary-50 hover:to-warm-50 transition-all duration-300">
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🥛</div>
+              <p className="text-gray-800 font-semibold text-lg">Молочні продукти</p>
             </div>
-            <div className="p-4">
-              <div className="text-4xl mb-2">🍚</div>
-              <p className="text-gray-700 font-medium">Олія та цукор</p>
+            <div className="group p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary-50 hover:to-warm-50 transition-all duration-300">
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🍚</div>
+              <p className="text-gray-800 font-semibold text-lg">Олія та цукор</p>
             </div>
           </div>
         </div>

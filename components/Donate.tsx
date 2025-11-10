@@ -5,26 +5,32 @@ import { Heart, CreditCard, Building2 } from 'lucide-react'
 
 export default function Donate() {
   return (
-    <section id="donate" className="py-20 bg-gradient-to-br from-primary-50 via-warm-50 to-peach-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+    <section id="donate" className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-warm-50 to-peach-50"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,145,56,0.15),transparent_50%)]"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-4xl mx-auto text-center mb-20">
+          <div className="inline-block mb-6">
+            <span className="text-sm font-semibold text-primary-600 tracking-wider uppercase">Донати</span>
+          </div>
+          <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-8 leading-tight">
             Підтримати нашу діяльність
           </h2>
-          <p className="text-xl text-gray-700">
+          <p className="text-xl md:text-2xl text-gray-600 font-light">
             Ваша підтримка допомагає нам продовжувати надавати допомогу тим, хто її потребує
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {/* QR Code Section */}
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
-            <div className="flex items-center justify-center mb-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-full">
-                <CreditCard className="text-white" size={32} />
+          <div className="bg-white rounded-3xl p-10 md:p-12 shadow-2xl border border-primary-100">
+            <div className="flex items-center justify-center mb-8">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl shadow-lg">
+                <CreditCard className="text-white" size={36} />
               </div>
             </div>
-            <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
               Швидкий донат через QR
             </h3>
             <p className="text-gray-700 mb-8 text-center">

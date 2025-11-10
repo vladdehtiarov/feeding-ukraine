@@ -17,10 +17,10 @@ export default function Header() {
   ]
 
   return (
-    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-      <nav className="container mx-auto px-4 py-4">
+    <header className="fixed top-0 w-full glass border-b border-white/20 shadow-lg z-50">
+      <nav className="container mx-auto px-6 py-5">
         <div className="flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold text-primary-600">
+          <a href="#" className="text-2xl font-bold bg-gradient-to-r from-primary-600 via-warm-600 to-peach-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
             ГО &quot;Спільний будинок&quot;
           </a>
 
@@ -30,9 +30,10 @@ export default function Header() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="text-gray-700 hover:text-primary-600 transition-colors duration-200"
+                  className="text-gray-700 hover:text-primary-600 transition-all duration-300 font-medium relative group"
                 >
                   {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-warm-600 group-hover:w-full transition-all duration-300"></span>
                 </a>
               </li>
             ))}
@@ -50,12 +51,12 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <ul className="md:hidden mt-4 space-y-4 pb-4">
+          <ul className="md:hidden mt-6 space-y-2 pb-4">
             {menuItems.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="block text-gray-700 hover:text-primary-600 transition-colors duration-200"
+                  className="block px-4 py-3 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-300 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

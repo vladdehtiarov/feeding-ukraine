@@ -4,13 +4,17 @@ import { Heart, Facebook, Instagram, Mail, Phone } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-12">
-      <div className="container mx-auto px-4">
+    <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(239,145,56,0.05),transparent_70%)]"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <div>
-              <h3 className="text-2xl font-bold mb-4">ГО &quot;Спільний будинок&quot;</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-warm-400 bg-clip-text text-transparent">
+                ГО &quot;Спільний будинок&quot;
+              </h3>
+              <p className="text-gray-300 leading-relaxed text-lg">
                 Благодійна організація, що допомагає людям, які потребують продуктів харчування
               </p>
             </div>
@@ -71,10 +75,10 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="border-t border-gray-700 pt-8 text-center">
-            <p className="text-gray-400 flex items-center justify-center">
+          <div className="border-t border-gray-700/50 pt-10 text-center">
+            <p className="text-gray-400 flex items-center justify-center text-lg">
               Створено з
-              <Heart className="mx-2 text-red-500" size={16} fill="currentColor" />
+              <Heart className="mx-2 text-red-400 animate-pulse" size={20} fill="currentColor" />
               для допомоги людям © 2025
             </p>
           </div>
