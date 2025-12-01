@@ -27,7 +27,7 @@ export default function Contact() {
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">Наша адреса</h3>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  м. Київ, бульвар Лесі Українки, 28
+                  бульвар Лесі Українки, 26<br />м. Київ
                 </p>
               </div>
             </div>

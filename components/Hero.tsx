@@ -2,7 +2,6 @@
 
 import { Heart, Users, Package } from 'lucide-react'
 import ParticleBackground from './ParticleBackground'
-import TypewriterText from './TypewriterText'
 
 export default function Hero() {
   return (
@@ -34,19 +33,14 @@ export default function Hero() {
           <h1 className="text-6xl md:text-7xl font-extrabold text-gray-900 mb-8 leading-tight">
             Разом ми{' '}
             <span className="bg-gradient-to-r from-primary-600 via-warm-500 to-peach-500 bg-clip-text text-transparent animate-gradient-x">
-              <TypewriterText 
-                words={['допомагаємо', 'підтримуємо', 'турбуємось', 'дбаємо']} 
-                typingSpeed={150}
-                deletingSpeed={100}
-                pauseDuration={2000}
-              />
+              підтримуємо
             </span>
             <br />
-            тим, хто потребує
+            тих, хто потребує
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-            Ми віримо, що кожна людина заслуговує на гідне життя. Наша місія — забезпечити продуктами харчування тих, хто опинився в складних життєвих обставинах.
+            Ми віримо, що кожна людина заслуговує на увагу до себе. Наша місія — допомогти продуктами харчування та ліками тим, хто опинився в складних життєвих обставинах через російську агресію.
           </p>
           
           <div className="flex flex-wrap justify-center gap-6 mb-16">

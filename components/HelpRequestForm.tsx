@@ -193,6 +193,7 @@ export default function HelpRequestForm() {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-warm-500 focus:border-transparent outline-none transition-all bg-white"
               >
                 <option value="">Оберіть категорію</option>
+                <option value="war-affected">Постраждалі через війну Росії проти України</option>
                 <option value="multichild">Багатодітна сім'я</option>
                 <option value="elderly">Малозабезпечена особа похилого віку</option>
                 <option value="single-parent">Неповна сім'я</option>

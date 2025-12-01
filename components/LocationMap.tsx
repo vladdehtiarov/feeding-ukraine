@@ -21,7 +21,7 @@ export default function LocationMap() {
         <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
           <div className="h-96 relative">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.8287766547744!2d30.535895776535453!3d50.42658097158088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf0e033ecbe9%3A0x57a4dffefec77da0!2z0LHRg9C70YzQstCw0YAg0JvQtdGB0ZYg0KPQutGA0LDRl9C90LrQuCwgMjgsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1699999999999!5m2!1suk!2sua"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.8540753!2d30.5358958!3d50.4262839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf0e033ecbe9%3A0x5f8c8a9d4e3a2c1b!2z0LHRg9C70YzQstCw0YAg0JvQtdGB0ZYg0KPQutGA0LDRl9C90LrQuCwgMjYsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1699999999999!5m2!1suk!2sua"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -38,7 +38,7 @@ export default function LocationMap() {
             <div className="text-3xl mb-3">📍</div>
             <h3 className="font-semibold text-gray-800 mb-2">Адреса</h3>
             <p className="text-gray-600">
-              бульвар Лесі Українки, 28
+              бульвар Лесі Українки, 26
               <br />
               м. Київ
             </p>
@@ -48,15 +48,15 @@ export default function LocationMap() {
             <div className="text-3xl mb-3">🚇</div>
             <h3 className="font-semibold text-gray-800 mb-2">Метро</h3>
             <p className="text-gray-600">
-              Станція &quot;Кловська&quot;
+              Станція &quot;Печерська&quot;
               <br />
-              5 хвилин пішки
+              Біля метро
             </p>
           </div>
 
           <div className="bg-white rounded-xl p-6 shadow-md text-center">
             <div className="text-3xl mb-3">🕐</div>
-            <h3 className="font-semibold text-gray-800 mb-2">Видача продуктів</h3>
+            <h3 className="font-semibold text-gray-800 mb-2">Видача продуктів та ліків</h3>
             <p className="text-gray-600">
               Пн-Пт: 10:00 - 17:00
               <br />

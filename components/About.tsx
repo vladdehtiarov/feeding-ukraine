@@ -14,7 +14,7 @@ export default function About() {
             Про нашу організацію
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">
-            ГО &quot;Спільний будинок&quot; — це благодійна організація, створена з метою допомоги людям, які з різних причин не можуть забезпечити себе найнеобхіднішим — їжею.
+            Наша благодійна організація - ГО &quot;Спільний будинок&quot; допомогає громадянам України, які через кризу, що виникла в результаті війни Росії проти України - не можуть забезпечити себе найнеобхіднішим — їжею та ліками.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export default function About() {
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-5 group-hover:text-primary-600 transition-colors duration-300">Наша мета</h3>
               <p className="text-gray-600 leading-relaxed text-lg group-hover:text-gray-700 transition-colors duration-300">
-                Забезпечити продуктами харчування багатодітні сім'ї, малозабезпечених людей похилого віку та всіх, хто потребує допомоги в складних життєвих обставинах.
+                Забезпечити продуктами харчування багатодітні сім'ї, малозабезпечених людей похилого віку та інших, хто потребує допомоги в складних життєвих обставинах через наслідки війни в Україні.
               </p>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function About() {
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-5 group-hover:text-peach-600 transition-colors duration-300">Наші цінності</h3>
               <p className="text-gray-600 leading-relaxed text-lg group-hover:text-gray-700 transition-colors duration-300">
-                Ми віримо в силу спільноти, гідність кожної людини та важливість підтримки у важкі часи. Разом ми створюємо теплий дім для всіх.
+                Ми віримо, що підтримка один одного в складних життєвих умовах - це головне та особливо важлива зараз. Разом ми створюємо теплий дім для всіх.
               </p>
             </div>
           </div>
@@ -86,10 +86,10 @@ export default function About() {
                   <Heart className="text-white" size={36} />
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-3">
-                  Потребуючі
+                  Постраждалі від війни
                 </h4>
                 <p className="text-gray-600 text-lg">
-                  Всі, хто опинився в складних обставинах
+                  Всі, хто опинився в складних обставинах через війну в Україні
                 </p>
               </div>
             </div>

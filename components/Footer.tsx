@@ -15,7 +15,7 @@ export default function Footer() {
                 ГО &quot;Спільний будинок&quot;
               </h3>
               <p className="text-gray-300 leading-relaxed text-lg">
-                Благодійна організація, що допомагає людям, які потребують продуктів харчування
+                Благодійна організація, що допомагає людям, які потребують продуктів харчування та ліків
               </p>
             </div>
 
@@ -48,7 +48,7 @@ export default function Footer() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Контакти</h4>
               <ul className="space-y-2 text-gray-300">
-                <li>м. Київ, бульвар Лесі Українки, 28</li>
+                <li>бульвар Лесі Українки, 26<br />м. Київ</li>
                 <li className="flex items-center">
                   <Phone size={16} className="mr-2" />
                   <a href="tel:+380682481167" className="hover:text-primary-400 transition-colors">

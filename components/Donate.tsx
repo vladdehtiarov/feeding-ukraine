@@ -41,7 +41,7 @@ export default function Donate() {
             <div className="bg-gradient-to-br from-warm-100 to-peach-100 rounded-2xl p-8 mb-6 flex items-center justify-center">
               <div className="bg-white rounded-xl p-4 shadow-lg">
                 <Image 
-                  src="/qr-code.jpg" 
+                  src="/qr-code.png" 
                   alt="QR код для донатів ПриватБанк" 
                   width={280}
                   height={280}
