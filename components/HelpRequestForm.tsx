@@ -16,24 +16,41 @@ export default function HelpRequestForm() {
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    console.log('Help request form submitted:', formData)
     setIsSubmitted(true)
     
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        address: '',
-        familySize: '',
-        children: '',
-        category: '',
-        situation: '',
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbwWvHrBo4_Stufg5benVxGlZhtdBM9Ky7rVuZKPPTCYJMJc3-lWDMiWVQzCPjXKYSvL/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
       })
-    }, 3000)
+      
+      console.log('Заявка на допомогу відправлена в Google Sheets')
+      
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          address: '',
+          familySize: '',
+          children: '',
+          category: '',
+          situation: '',
+        })
+      }, 3000)
+    } catch (error) {
+      console.error('Помилка відправки:', error)
+      setTimeout(() => {
+        setIsSubmitted(false)
+      }, 3000)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

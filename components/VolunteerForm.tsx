@@ -14,24 +14,39 @@ export default function VolunteerForm() {
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the data to your backend
-    console.log('Volunteer form submitted:', formData)
     setIsSubmitted(true)
     
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        age: '',
-        experience: '',
-        motivation: '',
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbz3e8phbFH5cqzdHfKWs9inqVw1ib2XBtwZf6pimH7RYzHgVolS42ld-5wAjwt-Ay8iMQ/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
       })
-    }, 3000)
+      
+      console.log('Дані волонтера відправлені в Google Sheets')
+      
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          age: '',
+          experience: '',
+          motivation: '',
+        })
+      }, 3000)
+    } catch (error) {
+      console.error('Помилка відправки:', error)
+      setTimeout(() => {
+        setIsSubmitted(false)
+      }, 3000)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
