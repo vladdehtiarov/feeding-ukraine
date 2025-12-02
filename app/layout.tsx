@@ -35,8 +35,47 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'NGO',
+    name: 'ГО "Спільний будинок"',
+    alternateName: 'Спільний будинок',
+    description: 'Благодійна організація, що допомагає людям, які потребують продуктів харчування та ліків через війну Росії проти України',
+    url: 'https://jointhome.org',
+    logo: 'https://jointhome.org/logo.png',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'бульвар Лесі Українки, 26',
+      addressLocality: 'Київ',
+      addressCountry: 'UA'
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+380682481167',
+      email: 'jointhome@ukr.net',
+      contactType: 'customer service',
+      availableLanguage: ['Ukrainian', 'Russian']
+    },
+    sameAs: [
+      // Add social media links here when available
+    ],
+    foundingDate: '2023',
+    areaServed: {
+      '@type': 'Country',
+      name: 'Ukraine'
+    },
+    knowsAbout: ['humanitarian aid', 'food assistance', 'war victims', 'Ukraine'],
+    mission: 'Допомога громадянам України, які через війну Росії проти України не можуть забезпечити себе їжею та ліками'
+  }
+
   return (
     <html lang="uk" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )

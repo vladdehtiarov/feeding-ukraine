@@ -1,9 +1,21 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
-import { Heart, CreditCard, Building2 } from 'lucide-react'
+import { Heart, CreditCard, Building2, Copy, Check } from 'lucide-react'
 
 export default function Donate() {
+  const [copiedField, setCopiedField] = useState<string | null>(null)
+
+  const copyToClipboard = async (text: string, field: string) => {
+    try {
+      await navigator.clipboard.writeText(text)
+      setCopiedField(field)
+      setTimeout(() => setCopiedField(null), 2000)
+    } catch (err) {
+      console.error('Failed to copy:', err)
+    }
+  }
   return (
     <section id="donate" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-warm-50 to-peach-50"></div>
@@ -51,12 +63,25 @@ export default function Donate() {
               </div>
             </div>
             
-            <div className="bg-warm-50 rounded-xl p-6 text-center">
-              <p className="text-sm text-gray-600 mb-2">Або переведіть вручну:</p>
-              <p className="font-mono text-lg font-semibold text-gray-800">
-                5168 7572 1234 5678
-              </p>
-              <p className="text-sm text-gray-600 mt-2">
+            <div className="bg-warm-50 rounded-xl p-6">
+              <p className="text-sm text-gray-600 mb-3 text-center">Або переведіть вручну:</p>
+              <div className="flex items-center justify-between bg-white rounded-lg p-3 mb-2">
+                <p className="font-mono text-lg font-semibold text-gray-800">
+                  5168 7572 1234 5678
+                </p>
+                <button
+                  onClick={() => copyToClipboard('5168757212345678', 'card')}
+                  className="ml-3 p-2 hover:bg-primary-50 rounded-lg transition-colors duration-200"
+                  title="Копіювати номер картки"
+                >
+                  {copiedField === 'card' ? (
+                    <Check className="text-green-600" size={20} />
+                  ) : (
+                    <Copy className="text-gray-600" size={20} />
+                  )}
+                </button>
+              </div>
+              <p className="text-sm text-gray-600 text-center">
                 ФОП "Спільний будинок"
               </p>
             </div>
@@ -78,21 +103,60 @@ export default function Donate() {
                   <span className="font-semibold w-32">Отримувач:</span>
                   <span>ГО "Спільний будинок"</span>
                 </div>
-                <div className="flex border-b border-gray-200 pb-2">
-                  <span className="font-semibold w-32">ЄДРПОУ:</span>
-                  <span>12345678</span>
+                <div className="flex items-center justify-between border-b border-gray-200 pb-2">
+                  <div className="flex">
+                    <span className="font-semibold w-32">ЄДРПОУ:</span>
+                    <span>12345678</span>
+                  </div>
+                  <button
+                    onClick={() => copyToClipboard('12345678', 'edrpou')}
+                    className="p-1 hover:bg-warm-50 rounded transition-colors duration-200"
+                    title="Копіювати ЄДРПОУ"
+                  >
+                    {copiedField === 'edrpou' ? (
+                      <Check className="text-green-600" size={18} />
+                    ) : (
+                      <Copy className="text-gray-600" size={18} />
+                    )}
+                  </button>
                 </div>
-                <div className="flex border-b border-gray-200 pb-2">
-                  <span className="font-semibold w-32">IBAN:</span>
-                  <span className="font-mono text-sm">UA123456789012345678901234567</span>
+                <div className="flex items-center justify-between border-b border-gray-200 pb-2">
+                  <div className="flex flex-col flex-1">
+                    <span className="font-semibold mb-1">IBAN:</span>
+                    <span className="font-mono text-sm">UA123456789012345678901234567</span>
+                  </div>
+                  <button
+                    onClick={() => copyToClipboard('UA123456789012345678901234567', 'iban')}
+                    className="p-1 hover:bg-warm-50 rounded transition-colors duration-200 ml-2"
+                    title="Копіювати IBAN"
+                  >
+                    {copiedField === 'iban' ? (
+                      <Check className="text-green-600" size={18} />
+                    ) : (
+                      <Copy className="text-gray-600" size={18} />
+                    )}
+                  </button>
                 </div>
                 <div className="flex border-b border-gray-200 pb-2">
                   <span className="font-semibold w-32">Банк:</span>
                   <span>АТ КБ "ПриватБанк"</span>
                 </div>
-                <div className="flex pb-2">
-                  <span className="font-semibold w-32">МФО:</span>
-                  <span>305299</span>
+                <div className="flex items-center justify-between pb-2">
+                  <div className="flex">
+                    <span className="font-semibold w-32">МФО:</span>
+                    <span>305299</span>
+                  </div>
+                  <button
+                    onClick={() => copyToClipboard('305299', 'mfo')}
+                    className="p-1 hover:bg-warm-50 rounded transition-colors duration-200"
+                    title="Копіювати МФО"
+                  >
+                    {copiedField === 'mfo' ? (
+                      <Check className="text-green-600" size={18} />
+                    ) : (
+                      <Copy className="text-gray-600" size={18} />
+                    )}
+                  </button>
                 </div>
               </div>
             </div>

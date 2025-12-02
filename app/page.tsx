@@ -13,11 +13,14 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import CursorGlow from '@/components/CursorGlow'
 import FadeInSection from '@/components/FadeInSection'
+import ScrollToTop from '@/components/ScrollToTop'
+import FAQ from '@/components/FAQ'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <CursorGlow />
+      <ScrollToTop />
       <Header />
       <Hero />
       
@@ -51,6 +54,10 @@ export default function Home() {
       
       <FadeInSection delay={100}>
         <Contact />
+      </FadeInSection>
+      
+      <FadeInSection delay={200}>
+        <FAQ />
       </FadeInSection>
       
       <Footer />

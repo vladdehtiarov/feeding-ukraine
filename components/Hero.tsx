@@ -2,6 +2,7 @@
 
 import { Heart, Users, Package } from 'lucide-react'
 import ParticleBackground from './ParticleBackground'
+import ShareButtons from './ShareButtons'
 
 export default function Hero() {
   return (
@@ -43,7 +44,7 @@ export default function Hero() {
             Ми віримо, що кожна людина заслуговує на увагу до себе. Наша місія — допомогти продуктами харчування та ліками тим, хто опинився в складних життєвих обставинах через російську агресію.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-6 mb-16">
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
             <a
               href="#donate"
               className="group magnetic-button shine-effect px-10 py-5 bg-gradient-to-r from-primary-600 via-primary-500 to-primary-600 text-white rounded-2xl font-semibold hover:shadow-[0_25px_60px_rgba(239,145,56,0.5)] transition-all duration-500 shadow-xl hover:scale-110 hover:-translate-y-2 relative overflow-hidden border-2 border-transparent hover:border-primary-400"
@@ -62,6 +63,10 @@ export default function Hero() {
                 🤝 Стати волонтером
               </span>
             </a>
+          </div>
+
+          <div className="flex justify-center mb-16">
+            <ShareButtons />
           </div>
         </div>
 

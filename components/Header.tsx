@@ -12,6 +12,7 @@ export default function Header() {
     { href: '#help', label: 'Як допомогти' },
     { href: '#donate', label: 'Підтримати' },
     { href: '#volunteer', label: 'Волонтерство' },
+    { href: '#faq', label: 'FAQ' },
     { href: '#location', label: 'Де ми' },
     { href: '#contact', label: 'Контакти' },
   ]
