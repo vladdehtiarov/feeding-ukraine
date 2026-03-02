@@ -1,20 +1,23 @@
 'use client'
 
 import { MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { useTranslation } from '@/lib/i18n/LanguageContext'
 
 export default function Contact() {
+  const { t } = useTranslation()
+
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-white to-warm-50/30">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <div className="inline-block mb-6">
-            <span className="text-sm font-semibold text-primary-600 tracking-wider uppercase">Зв'яжіться з нами</span>
+            <span className="text-sm font-semibold text-primary-600 tracking-wider uppercase">{t('contact.badge')}</span>
           </div>
           <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-8 leading-tight">
-            Контакти
+            {t('contact.heading')}
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 font-light">
-            Зв'яжіться з нами — ми завжди раді відповісти на ваші запитання
+            {t('contact.description')}
           </p>
         </div>
 
@@ -25,9 +28,11 @@ export default function Contact() {
                 <MapPin className="text-white" size={28} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">Наша адреса</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">{t('contact.addressTitle')}</h3>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  бульвар Лесі Українки, 26<br />м. Київ
+                  {t('contact.addressText').split('\n').map((line, i) => (
+                    <span key={i}>{line}{i === 0 && <br />}</span>
+                  ))}
                 </p>
               </div>
             </div>
@@ -39,9 +44,9 @@ export default function Contact() {
                 <Phone className="text-white" size={28} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-warm-600 transition-colors duration-300">Телефон</h3>
-                <a 
-                  href="tel:+380682481167" 
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-warm-600 transition-colors duration-300">{t('contact.phoneTitle')}</h3>
+                <a
+                  href="tel:+380682481167"
                   className="text-gray-600 text-lg hover:text-warm-600 transition-colors duration-300 block"
                 >
                   +38 (068) 248-11-67
@@ -56,9 +61,9 @@ export default function Contact() {
                 <Mail className="text-white" size={28} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-peach-600 transition-colors duration-300">Email</h3>
-                <a 
-                  href="mailto:jointhome@ukr.net" 
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-peach-600 transition-colors duration-300">{t('contact.emailTitle')}</h3>
+                <a
+                  href="mailto:jointhome@ukr.net"
                   className="text-gray-600 text-lg hover:text-peach-600 transition-colors duration-300 break-all block"
                 >
                   jointhome@ukr.net
@@ -73,11 +78,11 @@ export default function Contact() {
                 <Clock className="text-white" size={28} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">Години роботи</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">{t('contact.hoursTitle')}</h3>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Пн-Пт: 9:00 - 18:00
+                  {t('contact.hoursWeekdays')}
                   <br />
-                  Сб-Нд: За домовленістю
+                  {t('contact.hoursWeekend')}
                 </p>
               </div>
             </div>
@@ -87,4 +92,3 @@ export default function Contact() {
     </section>
   )
 }
-

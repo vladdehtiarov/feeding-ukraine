@@ -1,20 +1,23 @@
 'use client'
 
 import { Target, Users, Heart, HeartHandshake } from 'lucide-react'
+import { useTranslation } from '@/lib/i18n/LanguageContext'
 
 export default function About() {
+  const { t } = useTranslation()
+
   return (
     <section id="about" className="py-24 bg-gradient-to-b from-white to-warm-50/30">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <div className="inline-block mb-6">
-            <span className="text-sm font-semibold text-primary-600 tracking-wider uppercase">Про нас</span>
+            <span className="text-sm font-semibold text-primary-600 tracking-wider uppercase">{t('about.badge')}</span>
           </div>
           <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-8 leading-tight">
-            Про нашу організацію
+            {t('about.heading')}
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">
-            Наша благодійна організація - ГО &quot;Спільний будинок&quot; допомогає громадянам України, які через кризу, що виникла в результаті війни Росії проти України - не можуть забезпечити себе найнеобхіднішим — їжею та ліками.
+            {t('about.description')}
           </p>
         </div>
 
@@ -26,9 +29,9 @@ export default function About() {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl mb-6 shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
                 <Target className="text-white" size={36} />
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-5 group-hover:text-primary-600 transition-colors duration-300">Наша мета</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-5 group-hover:text-primary-600 transition-colors duration-300">{t('about.goalTitle')}</h3>
               <p className="text-gray-600 leading-relaxed text-lg group-hover:text-gray-700 transition-colors duration-300">
-                Забезпечити продуктами харчування багатодітні сім'ї, малозабезпечених людей похилого віку та інших, хто потребує допомоги в складних життєвих обставинах через наслідки війни в Україні.
+                {t('about.goalText')}
               </p>
             </div>
           </div>
@@ -40,9 +43,9 @@ export default function About() {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-peach-500 to-peach-600 rounded-2xl mb-6 shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
                 <Heart className="text-white group-hover:animate-pulse" size={36} />
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-5 group-hover:text-peach-600 transition-colors duration-300">Наші цінності</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-5 group-hover:text-peach-600 transition-colors duration-300">{t('about.valuesTitle')}</h3>
               <p className="text-gray-600 leading-relaxed text-lg group-hover:text-gray-700 transition-colors duration-300">
-                Ми віримо, що підтримка один одного в складних життєвих умовах - це головне та особливо важлива зараз. Разом ми створюємо теплий дім для всіх.
+                {t('about.valuesText')}
               </p>
             </div>
           </div>
@@ -51,46 +54,34 @@ export default function About() {
         <div className="relative bg-white rounded-3xl p-10 md:p-14 max-w-5xl mx-auto shadow-xl border border-warm-100 overflow-hidden">
           <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-br from-warm-100 to-transparent rounded-br-full opacity-50"></div>
           <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-tl from-peach-100 to-transparent rounded-tl-full opacity-50"></div>
-          
+
           <div className="relative z-10">
             <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-center">
-              Кому ми допомагаємо
+              {t('about.whoTitle')}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               <div className="group text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Users className="text-white" size={36} />
                 </div>
-                <h4 className="text-2xl font-bold text-gray-900 mb-3">
-                  Багатодітні сім'ї
-                </h4>
-                <p className="text-gray-600 text-lg">
-                  Підтримуємо родини з трьома та більше дітьми
-                </p>
+                <h4 className="text-2xl font-bold text-gray-900 mb-3">{t('about.who1Title')}</h4>
+                <p className="text-gray-600 text-lg">{t('about.who1Text')}</p>
               </div>
 
               <div className="group text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-warm-500 to-warm-600 rounded-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <HeartHandshake className="text-white" size={36} />
                 </div>
-                <h4 className="text-2xl font-bold text-gray-900 mb-3">
-                  Люди похилого віку
-                </h4>
-                <p className="text-gray-600 text-lg">
-                  Допомагаємо малозабезпеченим пенсіонерам
-                </p>
+                <h4 className="text-2xl font-bold text-gray-900 mb-3">{t('about.who2Title')}</h4>
+                <p className="text-gray-600 text-lg">{t('about.who2Text')}</p>
               </div>
 
               <div className="group text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-peach-500 to-peach-600 rounded-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Heart className="text-white" size={36} />
                 </div>
-                <h4 className="text-2xl font-bold text-gray-900 mb-3">
-                  Постраждалі від війни
-                </h4>
-                <p className="text-gray-600 text-lg">
-                  Всі, хто опинився в складних обставинах через війну в Україні
-                </p>
+                <h4 className="text-2xl font-bold text-gray-900 mb-3">{t('about.who3Title')}</h4>
+                <p className="text-gray-600 text-lg">{t('about.who3Text')}</p>
               </div>
             </div>
           </div>
@@ -99,4 +90,3 @@ export default function About() {
     </section>
   )
 }
-

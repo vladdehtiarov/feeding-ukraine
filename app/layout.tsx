@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { LanguageProvider } from '@/lib/i18n/LanguageContext'
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 
@@ -76,7 +77,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}><LanguageProvider>{children}</LanguageProvider></body>
     </html>
   )
 }

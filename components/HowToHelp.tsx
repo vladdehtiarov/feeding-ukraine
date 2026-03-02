@@ -1,38 +1,41 @@
 'use client'
 
 import { HeartHandshake, Users, Package, MessageCircle } from 'lucide-react'
+import { useTranslation } from '@/lib/i18n/LanguageContext'
 
 export default function HowToHelp() {
+  const { t } = useTranslation()
+
   const ways = [
     {
       icon: HeartHandshake,
-      title: 'Фінансова підтримка',
-      description: 'Ваш внесок допоможе нам придбати продукти для потребуючих',
-      action: 'Підтримати',
+      titleKey: 'howToHelp.way1Title',
+      descKey: 'howToHelp.way1Desc',
+      actionKey: 'howToHelp.way1Action',
       href: '#donate',
       color: 'primary',
     },
     {
       icon: Users,
-      title: 'Стати волонтером',
-      description: 'Приєднуйтесь до нашої команди та допомагайте людям',
-      action: 'Приєднатися',
+      titleKey: 'howToHelp.way2Title',
+      descKey: 'howToHelp.way2Desc',
+      actionKey: 'howToHelp.way2Action',
       href: '#volunteer',
       color: 'warm',
     },
     {
       icon: Package,
-      title: 'Передати продукти',
-      description: 'Ви можете принести продукти харчування до нашого офісу',
-      action: 'Дізнатися більше',
+      titleKey: 'howToHelp.way3Title',
+      descKey: 'howToHelp.way3Desc',
+      actionKey: 'howToHelp.way3Action',
       href: '#location',
       color: 'peach',
     },
     {
       icon: MessageCircle,
-      title: 'Поширити інформацію',
-      description: 'Розкажіть про нас друзям та в соціальних мережах',
-      action: 'Поділитися',
+      titleKey: 'howToHelp.way4Title',
+      descKey: 'howToHelp.way4Desc',
+      actionKey: 'howToHelp.way4Action',
       href: '#contact',
       color: 'primary',
     },
@@ -43,10 +46,10 @@ export default function HowToHelp() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Як ви можете допомогти
+            {t('howToHelp.heading')}
           </h2>
           <p className="text-xl text-gray-700">
-            Є багато способів долучитися до нашої справи та зробити світ кращим, через турботу про людей
+            {t('howToHelp.description')}
           </p>
         </div>
 
@@ -62,16 +65,16 @@ export default function HowToHelp() {
                   <Icon className="text-white" size={32} />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                  {way.title}
+                  {t(way.titleKey)}
                 </h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  {way.description}
+                  {t(way.descKey)}
                 </p>
                 <a
                   href={way.href}
                   className={`inline-block px-6 py-3 bg-${way.color}-600 text-white rounded-full font-semibold hover:bg-${way.color}-700 transition-colors duration-200`}
                 >
-                  {way.action}
+                  {t(way.actionKey)}
                 </a>
               </div>
             )
@@ -81,4 +84,3 @@ export default function HowToHelp() {
     </section>
   )
 }
-
