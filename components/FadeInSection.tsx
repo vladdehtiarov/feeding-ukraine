@@ -11,6 +11,9 @@ export default function FadeInSection({ children, delay = 0 }: FadeInSectionProp
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    // Mark that JS is running so CSS animations activate
+    document.documentElement.classList.add('js-animations')
+
     const element = ref.current
     if (!element) return
 
@@ -25,7 +28,7 @@ export default function FadeInSection({ children, delay = 0 }: FadeInSectionProp
           }
         })
       },
-      { 
+      {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
       }

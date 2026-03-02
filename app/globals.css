@@ -201,14 +201,15 @@ html {
   animation: bounce-soft 0.6s ease;
 }
 
-/* Fade in sections on scroll */
+/* Fade in sections on scroll - progressive enhancement */
 .fade-in-section {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.fade-in-section:not(.fade-in-visible) {
+/* Only hide when JS has loaded (js-enabled class added to html by FadeInSection) */
+.js-animations .fade-in-section:not(.fade-in-visible) {
   opacity: 0;
   transform: translateY(30px);
 }
